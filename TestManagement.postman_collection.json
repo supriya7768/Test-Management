@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "2374ca6c-5b5a-4323-956a-54117e07c474",
+		"name": "TestManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34754472"
+	},
+	"item": [
+		{
+			"name": "Create Question",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"question\": \"Which of the following are not OOPs pillars?\",\r\n    \"option_one\": \"Abstraction\",\r\n    \"option_two\": \"Inheritance\",\r\n    \"option_three\": \"Encapsulation\",\r\n    \"option_four\": \"Polymorphism\",\r\n    \"correct_option\": \"Encapsulation\",\r\n    \"positive_mark\": \"3\",\r\n    \"negative_mark\": \"-1\",\r\n    \"subcategory\": {\r\n        \"subcategory_name\": \"OOPs\",\r\n        \"subcategory_description\": \"OOPs for Java\",\r\n        \"category\": {\r\n            \"category_name\": \"Java\",\r\n            \"category_description\": \"Core Java Category\"\r\n        }\r\n    }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mcq/createQuestion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mcq",
+						"createQuestion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Question",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mcq/getAllQuestion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mcq",
+						"getAllQuestion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Question By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mcq/getQuestion/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mcq",
+						"getQuestion",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Question",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mcq/updateQuestion/3?category=Core Java&question=Which access modifier cannot access other than its own class&option_one=public&option_two=default&option_three=private&option_four=protected&correct_option=private",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mcq",
+						"updateQuestion",
+						"3"
+					],
+					"query": [
+						{
+							"key": "category",
+							"value": "Core Java"
+						},
+						{
+							"key": "question",
+							"value": "Which access modifier cannot access other than its own class"
+						},
+						{
+							"key": "option_one",
+							"value": "public"
+						},
+						{
+							"key": "option_two",
+							"value": "default"
+						},
+						{
+							"key": "option_three",
+							"value": "private"
+						},
+						{
+							"key": "option_four",
+							"value": "protected"
+						},
+						{
+							"key": "correct_option",
+							"value": "private"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Question",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/mcq/deleteQuestion/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mcq",
+						"deleteQuestion",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"category_name\": \"Java\",\r\n    \"category_description\": \"Java category\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/category/createCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"createCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/category/getCategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"getCategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/category/updateCategory/3?category_name=Spring Core&category_description=Spring Core Framework",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"updateCategory",
+						"3"
+					],
+					"query": [
+						{
+							"key": "category_name",
+							"value": "Spring Core"
+						},
+						{
+							"key": "category_description",
+							"value": "Spring Core Framework"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Category",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/category/deleteCategory/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"category",
+						"deleteCategory",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Subcategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subcategory_name\":\"Dependency\",\r\n    \"subcategory_description\":\"Types of dependency\",\r\n    \"category\":{\r\n    \"category_name\": \"Spring Core\",\r\n   \"category_description\": \"Spring Core category\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subcategory/createSubcategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subcategory",
+						"createSubcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Subcategory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subcategory/deleteSubcategory/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subcategory",
+						"deleteSubcategory",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subcategory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subcategory/getSubcategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subcategory",
+						"getSubcategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Subcategory",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/subcategory/updateSubcategory/1?subcategory_name=OOPs&subcategory_description=OOPs for java&category_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subcategory",
+						"updateSubcategory",
+						"1"
+					],
+					"query": [
+						{
+							"key": "subcategory_name",
+							"value": "OOPs"
+						},
+						{
+							"key": "subcategory_description",
+							"value": "OOPs for java"
+						},
+						{
+							"key": "category_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload from Excel sheet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/GIT/TestManagement/QuestionBank.xlsx"
+						},
+						{
+							"key": "file",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/mcq/upload?file=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mcq",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
